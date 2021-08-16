@@ -1,0 +1,14 @@
+next = driver.find_element_by_xpath('//a[@title="Page suivante"]')
+
+for x in range(2):
+    time.sleep(3)
+    
+    links = driver.find_elements_by_class_name("styles_adCard__2YFTi")
+    for l in links:
+        data = l.text
+        print(data)
+        print()
+        
+    next = driver.find_element_by_xpath('//a[@title="Page suivante"]')
+    next.click()
+    time.sleep(3)
